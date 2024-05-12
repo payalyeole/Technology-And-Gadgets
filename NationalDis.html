@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Distributor</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+        }
+
+        .image-container {
+            /* max-width: 800px; */
+            margin-top: 30%;
+            margin: 20px auto;
+            overflow: hidden;
+            display: flex;
+        }
+
+        img {
+            width: 70%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        .clicked {
+            transform: scale(1.1);
+        }
+
+        img:first-child {
+            float: left;
+            margin-right: 10px;
+        }
+
+        a img {
+            border: 15px solid white; 
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll('.image-container img');
+
+            images.forEach(img => {
+                img.addEventListener('click', function () {
+                    images.forEach(i => i.classList.remove('clicked'));
+
+                    this.classList.add('clicked');
+                });
+            });
+        });
+    </script>
+</head>
+<body><br><br><br><br><br><br><br><br>
+    <div class="image-container">
+        <a href="https://www.galax.com/" target="_blank"><img src="img/1 (1).png" alt=""></a>
+        <a href="https://www.powercolor.com/" target="_blank"><img src="img/2 (1).png" alt=""></a>
+        <a href="https://www.teamgroupinc.com/en/" target="_blank"><img src="img/3 (1).png" alt=""></a>
+        <a href="https://www.fractal-design.com/" target="_blank"><img src="img/4 (1).png" alt=""></a><br><br>
+    </div>
+    <DIV style="display: block; margin-left: 20%;">
+                <br><br><a href="https://www.antec.com/" target="_blank"><img src="img/Antecbrand (1).png" alt=""></a>
+    </DIV>
+</body>
+</html>
